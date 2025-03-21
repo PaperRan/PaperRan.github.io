@@ -1,20 +1,24 @@
 // 图片画廊功能实现
-const GALLERY_API = 'https://api.hn/api.php?zd=pc&fl=suiji&gs=json';
+const LOCAL_IMAGES = [
+  { imgurl: 'image/1.png', width: 800, height: 600 },
+  { imgurl: 'image/2.png', width: 1024, height: 768 },
+  { imgurl: 'image/3.png', width: 1920, height: 1080 }
+];
 
 window.addEventListener('DOMContentLoaded', () => {
     initGallery();
     loadMoreImages();
 });
 
-async function fetchImages(page = 1) {
-    try {
-        const response = await fetch(`${GALLERY_API}&page=${page}`);
-        const data = await response.json();
-        return data;
-    } catch (error) {
-        console.error('图片加载失败:', error);
-        showError('图片加载失败，请稍后重试');
-    }
+function fetchImages(page = 1) {
+    return new Promise(resolve => {
+        const startIndex = (page - 1) * 1;
+        const endIndex = startIndex + 1;
+        resolve({
+            code: '200',
+            ...LOCAL_IMAGES.slice(startIndex, endIndex)[0]
+        });
+    });
 }
 
 function createGalleryItem(imgData) {
@@ -47,6 +51,9 @@ async function loadMoreImages() {
         const gallery = document.getElementById('gallery-container');
         const item = createGalleryItem(data);
         gallery.appendChild(item);
+        if (currentPage >= LOCAL_IMAGES.length) {
+            document.getElementById('load-more').disabled = true;
+        }
         currentPage++;
     }
     

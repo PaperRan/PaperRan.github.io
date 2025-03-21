@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计算机专业学生作品集</title>
+    <link href="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">我的作品集</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">关于我</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery">图片画廊</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">项目展示</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- 内容区域 -->
+    <main class="container my-5">
+        <section id="about" class="mb-5">
+            <h2 class="display-4 mb-4">关于我</h2>
+            <div class="row">
+                <div class="col-md-8">
+                    <p class="lead">计算机科学与技术专业大三学生，主攻Web开发和人工智能方向</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="mb-5">
+            <h2 class="display-4 mb-4">图片画廊</h2>
+            <div class="row" id="gallery-container"></div>
+            <div class="text-center mt-4">
+                <button id="load-more" class="btn load-more-btn">加载更多</button>
+                <div id="gallery-loader" class="spinner-border text-primary d-none" role="status">
+                    <span class="visually-hidden">加载中...</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="mb-5">
+            <h2 class="display-4 mb-4">项目展示</h2>
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                    <div class="project-card p-4 h-100">
+                        <h3>智能问答系统</h3>
+                        <p>基于深度学习的自然语言处理系统，支持多轮对话和知识推理</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="project-card p-4 h-100">
+                        <h3>电商数据分析平台</h3>
+                        <p>使用Spark构建的实时数据分析看板，支持百万级数据处理</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.bootcdn.net/ajax/libs/twitter-bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

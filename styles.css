@@ -1,0 +1,44 @@
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+}
+
+body {
+  background: #f8f9fa;
+  min-height: 100vh;
+}
+
+.gallery-item {
+  transition: transform 0.3s ease;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.gallery-item:hover {
+  transform: translateY(-5px);
+}
+
+.load-more-btn {
+  background: var(--secondary-color);
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.load-more-btn:hover {
+  background: #2980b9;
+  transform: scale(1.05);
+}
+
+.project-card {
+  background: white;
+  border: none;
+  border-radius: 12px;
+  transition: box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  box-shadow: 0 10px 15px rgba(0,0,0,0.2);
+}

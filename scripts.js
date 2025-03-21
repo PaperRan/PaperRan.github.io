@@ -1,9 +1,9 @@
 // 图片画廊功能实现
 const LOCAL_IMAGES = [
 
-  { imgurl: '/githubweb/image/1.png', width: 800, height: 600 },
-  { imgurl: '/githubweb/image/2.png', width: 1024, height: 768 },
-  { imgurl: '/githubweb/image/3.png', width: 1920, height: 1080 }
+  { imgurl: 'https://github.com/PaperRan/PaperRan.github.io/image/1.png', width: 800, height: 600 },
+  { imgurl: 'https://github.com/PaperRan/PaperRan.github.io/image/2.png', width: 1024, height: 768 },
+  { imgurl: 'https://github.com/PaperRan/PaperRan.github.io/image/3.png', width: 1920, height: 1080 }
 
 ];
 

@@ -1,14 +1,10 @@
 // 图片画廊功能实现
 const LOCAL_IMAGES = [
-<<<<<<< HEAD
-  { imgurl: '/image/1.png', width: 800, height: 600 },
-  { imgurl: '/image/2.png', width: 1024, height: 768 },
-  { imgurl: '/image/3.png', width: 1920, height: 1080 }
-=======
+
   { imgurl: 'image/1.png', width: 800, height: 600 },
   { imgurl: 'image/2.png', width: 1024, height: 768 },
   { imgurl: 'image/3.png', width: 1920, height: 1080 }
->>>>>>> 12e5a6c1eb95e24ed0c60ad7c3c0222faaa1bb35
+
 ];
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -74,8 +70,4 @@ function showError(message) {
 }
 
 // 分页按钮事件绑定
-<<<<<<< HEAD
 document.getElementById('load-more').addEventListener('click', loadMoreImages);
-=======
-document.getElementById('load-more').addEventListener('click', loadMoreImages);
->>>>>>> 12e5a6c1eb95e24ed0c60ad7c3c0222faaa1bb35
